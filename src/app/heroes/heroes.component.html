@@ -1,0 +1,22 @@
+<div id="pagemeta" class="pane pagemeta">
+  <div class="container">
+    <div class="node node-dlts-book clearfix clearfix view-mode-metadata " dir="ltr" data-dir="ltr" data-lang="en">
+      <div dir="ltr" class="field field-name-title field-type-ds field-label-hidden">
+        <div dir="ltr" class="field-items">
+          <div dir="ltr" class="field-item even">
+            <h2>{{label}}</h2>
+          </div>
+        </div>
+      </div>
+      <div *ngFor="let field of metadata" dir="ltr"
+        class="field {{field.field_type}} {{field.machine_name}} field-label-inline clearfix">
+        <div *ngIf="field.value">
+          <div dir="ltr" class="field-label">{{field.label}}<span class="separator">:</span></div>
+          <div dir="ltr" class="field-items">
+            <div dir="ltr" class="field-item even">{{field.value}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

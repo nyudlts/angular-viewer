@@ -1,0 +1,33 @@
+<div id="navbar" class="pane navbar" role="navigation">
+  <ul class="navbar navbar-left">
+    <li class="navbar-item">
+      <a (click)="AppComponent.test()" data-title="Metadata" title="Show/hide metadata" class="button metadata on"
+        id="button-metadata">
+        <span>Metadata</span>
+      </a>
+    </li>
+    <li class="navbar-item"><a href="#1?page_view=double" class="paging toggle active page-double"
+        (click)="messageService.clear()"><span>Toggle between single or double page</span></a></li>
+    <li class="navbar-item"><a href="#thumbnails" data-title="Select page" title="Select page"
+        class="button thumbnails off" id="button-thumbnails"><span>Pages</span></a></li>
+  </ul>
+  <div class="navbar navbar-middle">
+    <div id="control-zoom">
+      <div id="control-zoom-in" class="navbar-item" data-title="Zoom in" title="Zoom in"></div>
+      <div id="control-zoom-out" class="navbar-item" data-title="Zoom out" title="Zoom out"></div>
+    </div>
+  </div>
+  <ul class="navbar navbar-arrows">
+    <li class="navbar-item navbar-pager-left"><a title="Go to previous page"
+        href="http://localhost:9000/viewer/books/fales_io_book000004/1"
+        class="paging previous pager-left inactive"><span>Go to previous page</span></a></li>
+    <li class="navbar-item navbar-pager-right"><a title="Go to next page"
+        href="http://localhost:9000/viewer/books/fales_io_book000004/2" class="paging next pager-right active"><span>Go
+          to next page</span></a></li>
+  </ul>
+  <ul class="navbar-fullscreen">
+    <li class="navbar-item"><a href="/viewer/books/fales_io_book000004#fullscreen" data-title="Toggle fullscreen"
+        title="Toggle fullscreen" class="button fullscreen off" id="button-fullscreen"><span>Toggle
+          fullscreen</span></a></li>
+  </ul>
+</div>
