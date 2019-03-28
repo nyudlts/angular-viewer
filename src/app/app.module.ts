@@ -12,6 +12,7 @@ import { PagerComponent } from './pager/pager.component';
 import { ThumbnailsComponent } from './thumbnails/thumbnails.component';
 import { ResourceComponent } from './resource/resource.component';
 import { DisplayComponent } from './display/display.component';
+import { MatSliderModule, MatSlideToggleModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -25,14 +26,15 @@ import { DisplayComponent } from './display/display.component';
     PagerComponent,
     ThumbnailsComponent,
     ResourceComponent,
-    DisplayComponent
+    DisplayComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MatSliderModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-
 export class AppModule { }

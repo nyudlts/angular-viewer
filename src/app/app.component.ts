@@ -13,8 +13,4 @@ import { Injectable } from '@angular/core';
 
 export class AppComponent {
   title = 'Book';
-
-  test() {
-    console.log('estamos aqui')
-  }
 }

@@ -28,9 +28,12 @@
   height: auto;
 }
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 @import "styles/date";
 @import "styles/field";
 @import "styles/views";
 @import "styles/dlts_viewer";
 @import "styles/reset";
 @import "styles/base";
+
