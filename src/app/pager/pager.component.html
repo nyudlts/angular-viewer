@@ -1,6 +1,4 @@
-<div id="pager" class="pane pager" dir="ltr">
-  <mat-slider
-    class="example-margin"
+<mat-slider
     [disabled]="disabled"
     [invert]="invert"
     [max]="max"
@@ -10,9 +8,11 @@
     [tickInterval]="tickInterval"
     [(ngModel)]="value"
     [vertical]="vertical">
-  </mat-slider>
-  <span role="navigation">
-    <form><input id="slider_value" value="1" aria-label="Page to jump to"></form> <span>/</span> <span
-      class="sequence_count">746</span>
-  </span>
-</div>
+</mat-slider>
+<span role="navigation">
+  <form>
+    <input id="slider_value" value="{{ value }}" aria-label="Page to jump to">
+  </form>
+  <span>/</span>
+  <span class="sequence_count">{{ max }}</span>
+</span>

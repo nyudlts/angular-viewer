@@ -9,9 +9,7 @@ export class Book {
   entity_language: string;
   entity_status: string;
   entity_type: string;
-  pages: {
-    page: Page[];
-  }
+  pages: Page[];
   metadata: Metadata;
   multivolume: Multivolume;
   series: Series[];

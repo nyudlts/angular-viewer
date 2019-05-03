@@ -1,14 +1,14 @@
 export class Page {
   isPartOf: string;
-  sequence: number[];
+  sequence: number;
   realPageNumber: number;
   cm: {
-    uri: string;
-    width: string;
-    height: string;
-    levels: string;
-    dwtLevels: string;
-    compositingLayerCount: string;
-    timestamp: string;
+    '@context': string;
+    '@id': string;
+    profile: object;
+    protocol: string;
+    height: number;
+    width: number;
+    tiles: object;
   };
 };

@@ -15,19 +15,22 @@ export class HeroesComponent implements OnInit {
 
   metadata: Metadata[];
 
-  label = 'Book'
+  label: string = 'Book';
 
   getMetadata(): void {
     this.heroService.getMetadata().subscribe(metadata => {
-      this.metadata = Object.values(metadata[0].metadata)
-      console.log(this.metadata)
-    })
+      this.metadata = Object.values(metadata[0].metadata);
+    });
   }
 
   getLabel(): void {
     this.heroService.getLabel().subscribe(book => {
-      this.label = book[0].entity_title
-    })
+      this.label = book[0].entity_title;
+    });
+  }
+
+  isMetadataPaneActive(): boolean {
+    return this.heroService.isMetadataPaneActive();
   }
 
   constructor(private heroService: HeroService) { }

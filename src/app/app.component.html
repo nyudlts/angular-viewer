@@ -1,24 +1,9 @@
-<!DOCTYPE html>
-<html lang="fre" dir="ltr" class="html page-books yui3-skin-sam not_mobile">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-  <title>{{title}}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base target="content-frame">
-</head>
-<body class="pane-body">
-  <div id="page" class="page">
-    <app-top></app-top>
-    <app-navbar></app-navbar>
-    <div role="main" id="main" class="pane main" dir="ltr">
-      <app-heroes></app-heroes>
-      <app-display style="width: inherit; height: inherit;"></app-display>
-      <app-loading></app-loading>
-    </div>
-    <app-pager></app-pager>
-    <app-thumbnails></app-thumbnails>
-  </div>
-</body>
-</html>
-
+<app-navbar></app-navbar>
+<div role="main" id="main" class="pane main" dir="ltr" [ngClass]="heroService.metadataPaneActive ? 'pagemeta-available' : 'pagemeta-hidden'">
+  <app-heroes id="pagemeta" class="pane pagemeta" [ngClass]="heroService.metadataPaneActive ? 'available' : 'hidden'"></app-heroes>
+  <app-display role="presentation" aria-hidden="true" id="display" class="pane display"></app-display>
+  <app-loading class="pane load loading" role="presentation" aria-hidden="true"></app-loading>
+</div>
+<app-pager id="pager" class="pane pager" dir="ltr"></app-pager>
+<app-thumbnails></app-thumbnails>
+<router-outlet></router-outlet>

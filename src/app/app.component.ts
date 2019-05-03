@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { Injectable } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
+import { HeroService } from './hero.service';
 
 @Component({
   selector: 'app-root',
@@ -12,5 +12,9 @@ import { Injectable } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'Book';
+
+  title = 'Resource';
+
+  constructor(public heroService: HeroService) {}
+
 }
